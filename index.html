@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanatana Dhara</title>
+  <meta name="google-site-verification" content="4lTesKO3wpZHXAVdjCCZsJP8dIlh_ZlCqp3tM99gUAM" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Georgia, serif;
+      background: #0d0d0d;
+      color: #e8d9b0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 640px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+      color: #f5c842;
+    }
+    .tagline {
+      font-size: 1.05rem;
+      color: #b8a878;
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #ccc0a0;
+      margin-bottom: 1.5rem;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 2rem auto;
+      width: 60%;
+    }
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    a {
+      color: #f5c842;
+      text-decoration: none;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover { border-color: #f5c842; }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: #665e4a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sanatana Dhara</h1>
+    <p class="tagline">The Eternal Flow</p>
+    <p>
+      Sanatana Dhara is a YouTube channel dedicated to sharing content rooted
+      in the timeless wisdom of Sanatana Dharma — philosophy, spirituality,
+      and the living traditions of Bharatiya culture.
+    </p>
+    <hr class="divider" />
+    <div class="links">
+      <a href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener">YouTube Channel</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <footer>
+      &copy; <span id="yr"></span> Sanatana Dhara. All rights reserved.
+    </footer>
+  </div>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
