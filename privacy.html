@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Sanatana Dhara</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Georgia, serif;
+      background: #0d0d0d;
+      color: #ccc0a0;
+      padding: 3rem 1.5rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #f5c842;
+      margin-bottom: 0.4rem;
+    }
+    .updated {
+      font-size: 0.85rem;
+      color: #665e4a;
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      color: #e8d9b0;
+      margin: 2rem 0 0.6rem;
+    }
+    p, li {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: #b8a878;
+    }
+    ul {
+      margin-left: 1.4rem;
+      margin-top: 0.4rem;
+    }
+    li { margin-bottom: 0.3rem; }
+    a { color: #f5c842; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr {
+      border: none;
+      border-top: 1px solid #222;
+      margin: 2.5rem 0;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: #f5c842;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: <span id="date"></span></p>
+
+    <p>
+      This Privacy Policy describes how the Sanatana Dhara application
+      ("<strong>we</strong>", "<strong>our</strong>", "<strong>the app</strong>")
+      handles information when you authorize it via Google OAuth.
+    </p>
+
+    <h2>1. What the App Does</h2>
+    <p>
+      Sanatana Dhara is a personal automation tool that uploads video content
+      to the YouTube channel <a href="https://www.youtube.com/@Sanatana_Dhara"
+      target="_blank" rel="noopener">@Sanatana_Dhara</a> using the YouTube Data API v3.
+      It is not a public-facing service and is operated solely by the channel owner.
+    </p>
+
+    <h2>2. Data We Access</h2>
+    <p>The app requests the following Google OAuth scopes:</p>
+    <ul>
+      <li><code>youtube.upload</code> — to upload videos to the channel</li>
+      <li><code>youtube.readonly</code> — to read channel metadata and video status</li>
+      <li><code>youtube</code> — to manage channel content</li>
+    </ul>
+
+    <h2>3. Data We Collect and Store</h2>
+    <p>
+      The app stores an OAuth token locally on the operator's private server.
+      This token is used exclusively to authenticate API requests to YouTube.
+      No personal data from any third party is collected, stored, or processed.
+      No user accounts are created. No analytics or tracking is performed.
+    </p>
+
+    <h2>4. Data Sharing</h2>
+    <p>
+      We do not sell, share, rent, or disclose any data to third parties.
+      API calls are made solely to Google's YouTube Data API v3 on behalf of
+      the channel owner.
+    </p>
+
+    <h2>5. Data Retention</h2>
+    <p>
+      The OAuth token is retained on the operator's server until manually
+      deleted or revoked. You can revoke access at any time via your
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      Google Account permissions page</a>.
+    </p>
+
+    <h2>6. Security</h2>
+    <p>
+      The token is stored in a restricted directory on a private server.
+      Access is limited to the channel operator only.
+    </p>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+      This app does not collect data from any individuals, including minors.
+    </p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      Any updates to this policy will be reflected on this page with a revised
+      date at the top.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      For any questions regarding this privacy policy, contact the channel
+      operator via the YouTube channel:
+      <a href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener">
+      youtube.com/@Sanatana_Dhara</a>.
+    </p>
+
+    <hr />
+    <a class="back" href="index.html">← Back to homepage</a>
+  </div>
+  <script>
+    const d = new Date();
+    document.getElementById('date').textContent =
+      d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  </script>
+</body>
+</html>
