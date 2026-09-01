@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanatana Dhara — The Eternal Flow</title>
+  <meta name="google-site-verification" content="4lTesKO3wpZHXAVdjCCZsJP8dIlh_ZlCqp3tM99gUAM" />
+  <meta name="google-site-verification" content="eatQfv9qPZDNCeBGRoXkG-49Uuu91v83kBR9Ck8DXZI" />
+  <meta name="description" content="Sanatana Dhara — timeless wisdom of Sanatana Dharma, philosophy, spirituality and the living traditions of Bharatiya culture." />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold:     #f5c842;
+      --gold-dim: #b8893a;
+      --bg:       #0a0a0a;
+      --bg2:      #111108;
+      --bg3:      #1a1a10;
+      --text:     #e8d9b0;
+      --text-dim: #998c6e;
+      --border:   #2a2a18;
+      --red:      #c0392b;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 2rem;
+    }
+    .nav-brand {
+      font-size: 1.15rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.8rem; }
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-family: system-ui, sans-serif;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: radial-gradient(ellipse at 50% 60%, #1c1800 0%, var(--bg) 70%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: 'ॐ';
+      position: absolute;
+      font-size: 28rem;
+      color: rgba(245,200,66,0.03);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero-symbol {
+      font-size: 3.5rem;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+      opacity: 0.85;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+    }
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-bottom: 1.8rem;
+    }
+    .hero-desc {
+      max-width: 580px;
+      font-size: 1.05rem;
+      color: #c4b48a;
+      margin-bottom: 2.5rem;
+      line-height: 1.85;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold);
+      color: #0a0a0a;
+      font-family: system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      padding: 0.75rem 1.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: #ffd84a; transform: translateY(-1px); }
+    .btn-yt svg { width: 20px; height: 20px; fill: var(--red); }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-title {
+      font-size: 1.6rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      font-family: system-ui, sans-serif;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── VIDEOS ── */
+    #videos { background: var(--bg2); }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .video-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .video-card:hover { border-color: var(--gold-dim); transform: translateY(-3px); }
+    .video-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      background: #111;
+    }
+    .video-info { padding: 0.85rem 1rem 1rem; }
+    .video-title {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.45;
+      margin-bottom: 0.4rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .video-date {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-family: system-ui, sans-serif;
+    }
+    .video-loading, .video-error {
+      color: var(--text-dim);
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      padding: 2rem 0;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--bg); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-text p {
+      color: #c4b48a;
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .stat-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.8rem;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      font-family: system-ui, sans-serif;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--bg2); }
+    .contact-box {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem;
+      max-width: 560px;
+    }
+    .contact-box p {
+      color: #c4b48a;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    footer a { color: var(--text-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 0.8rem; flex-wrap: wrap; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      nav { padding: 0.8rem 1rem; }
+      .nav-links { gap: 1rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .hero::before { font-size: 14rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="#">Sanatana Dhara</a>
+    <div class="nav-links">
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-symbol">ॐ</div>
+    <h1>Sanatana Dhara</h1>
+    <p class="hero-tagline">The Eternal Flow</p>
+    <p class="hero-desc">
+      Exploring the timeless wisdom of Sanatana Dharma — philosophy, spirituality,
+      and the living traditions of Bharatiya culture. Rooted in the ancient, relevant to the present.
+    </p>
+    <a class="btn btn-yt" href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/>
+        <path fill="#0a0a0a" d="M9.75 15.5l6.25-3.5-6.25-3.5v7z"/>
+      </svg>
+      Watch on YouTube
+    </a>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <div class="section-inner">
+      <h2 class="section-title">Latest Videos</h2>
+      <p class="section-sub">Updated automatically when new content is published</p>
+      <div class="video-grid" id="video-grid">
+        <p class="video-loading">Loading videos…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <h2 class="section-title">About the Channel</h2>
+      <p class="section-sub">What Sanatana Dhara stands for</p>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Sanatana Dhara is dedicated to preserving and sharing the eternal wisdom
+            embedded in the traditions of Bharatiya civilisation — from the Vedas and
+            Upanishads to the epics, puranas, and living spiritual practices.
+          </p>
+          <p>
+            The channel explores philosophy, dharma, history, rituals, and the cultural
+            continuum that has shaped one of the world's oldest living civilisations.
+            Content is created with care for authenticity and depth.
+          </p>
+          <p>
+            Whether you are new to these traditions or a lifelong student, Sanatana Dhara
+            offers a space to explore, reflect, and connect with the eternal flow.
+          </p>
+        </div>
+        <div class="about-stats" id="about-stats">
+          <div class="stat-box">
+            <span class="stat-num" id="stat-videos">—</span>
+            <span class="stat-label">Videos</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">ॐ</span>
+            <span class="stat-label">Eternal</span>
+          </div>
+          <div class="stat-box" style="grid-column: span 2;">
+            <a class="btn" href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener" style="width:100%; justify-content:center;">
+              Subscribe on YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Get in touch</p>
+      <div class="contact-box">
+        <p>
+          For collaborations, questions, or feedback about the channel and its content,
+          reach out via YouTube. The best way to connect is through the channel's
+          community tab or video comments.
+        </p>
+        <a class="btn" href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener">
+          Visit the Channel
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <div>&copy; <span id="yr"></span> Sanatana Dhara. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const CHANNEL_ID = 'UCP59favJ4uXU1ni5gahUuzw';
+    const RSS_URL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=' + CHANNEL_ID)}&api_key=&count=9`;
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('en-AU', { year: 'numeric', month: 'short', day: 'numeric' });
+    }
+
+    function getVideoId(url) {
+      const m = url.match(/[?&]v=([^&]+)/) || url.match(/youtu\.be\/([^?]+)/);
+      return m ? m[1] : null;
+    }
+
+    async function loadVideos() {
+      const grid = document.getElementById('video-grid');
+      try {
+        // Use a CORS proxy for the YouTube RSS feed
+        const feedUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)}`;
+        const res = await fetch(proxyUrl);
+        const data = await res.json();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, 'text/xml');
+        const entries = Array.from(xml.querySelectorAll('entry')).slice(0, 9);
+
+        if (!entries.length) throw new Error('No entries');
+
+        document.getElementById('stat-videos').textContent = entries.length + '+';
+
+        grid.innerHTML = entries.map(entry => {
+          const title = entry.querySelector('title')?.textContent || '';
+          const link  = entry.querySelector('link')?.getAttribute('href') || '#';
+          const published = entry.querySelector('published')?.textContent || '';
+          const videoId = link.match(/v=([^&]+)/)?.[1] || '';
+          const thumb = videoId ? `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg` : '';
+          return `
+            <a class="video-card" href="${link}" target="_blank" rel="noopener">
+              ${thumb ? `<img class="video-thumb" src="${thumb}" alt="${title}" loading="lazy" />` : ''}
+              <div class="video-info">
+                <div class="video-title">${title}</div>
+                <div class="video-date">${formatDate(published)}</div>
+              </div>
+            </a>`;
+        }).join('');
+      } catch (e) {
+        grid.innerHTML = `<p class="video-error">
+          Could not load videos automatically.
+          <a href="https://www.youtube.com/@Sanatana_Dhara" target="_blank" rel="noopener">View on YouTube →</a>
+        </p>`;
+      }
+    }
+
+    loadVideos();
+  </script>
+</body>
+</html>
